@@ -35,7 +35,7 @@ public class SwiftCodeDTO {
     @Pattern(regexp = "^[A-Z]{2}$", message = "Country ISO2 code must be exactly 2 uppercase letters")
     private String countryISO2;
 
-    private String countryName;  //
+    private String countryName;
 
     private Boolean isHeadquarter;
 

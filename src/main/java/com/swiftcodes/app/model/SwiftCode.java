@@ -31,7 +31,7 @@ public class SwiftCode {
     @Column(name = "is_headquarter")
     private Boolean isHeadquarter;
 
-    // Kolumna generowana w bazie – nie chcemy wstawiać do niej wartości z aplikacji.
+
     @Column(name = "base_swift_code", length = 8, insertable = false, updatable = false)
     private String baseSwiftCode;
 }
