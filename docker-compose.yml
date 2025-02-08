@@ -1,6 +1,6 @@
 services:
   database:
-    image: postgres:15
+    image: postgres:17
     container_name: swiftcodes_db
     restart: always
     environment:
@@ -11,6 +11,7 @@ services:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+      - ./backup.dump:/docker-entrypoint-initdb.d/backup.dump  # Automatyczne przywracanie bazy
 
   app:
     build: .
